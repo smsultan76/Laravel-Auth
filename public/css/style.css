@@ -1,0 +1,128 @@
+nav {
+    margin-bottom: 20px;
+}
+
+nav .container {
+    padding: 6px 0;
+}
+
+nav .container .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav .container .navbar-nav a {
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+}
+
+nav .container .navbar-nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+nav .container .navbar-nav a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.hero-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 5rem 0;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 2rem 0;
+    position: relative;
+    bottom: 0;
+}
+
+
+.body-container{
+    min-height: 400px;
+}
+
+
+
+/* login page  */
+
+.login-container {
+    max-width: 500px;
+
+    margin: 30px auto;
+    margin-top: 5vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.login-body {
+    padding: 30px;
+    background: white;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-login {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.social-login .btn {
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #6c757d;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.divider::before {
+    margin-right: .5em;
+}
+
+.divider::after {
+    margin-left: .5em;
+}
