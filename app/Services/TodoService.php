@@ -19,7 +19,15 @@ class TodoService
         return Todo::all();
     }
 
+    public function getOne($id){
+        return Todo::findOrFail($id);
+    }
+
     public function createTodo($data){
         return Todo::create($data);
+    }
+
+    public function deleteTodo($id){
+        return Todo::destroy($id);
     }
 }

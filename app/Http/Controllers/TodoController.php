@@ -22,6 +22,10 @@ class TodoController extends Controller
         return response()->json($todos);
     }
 
+    public function show($id){
+        $task = $this->todoService->getOne($id);
+        return response($task);
+    }
 
     public function store(Request $request){
         $request->validate([
@@ -43,5 +47,9 @@ class TodoController extends Controller
         $task = $this->todoUpdateService->updateTodo($id, $request->all());
         return response()->json($task);
     }
-    
+
+    public function destroy($id){
+        $task = $this->todoService->deleteTodo($id);
+        return response($task, 204);
+    }
 }
