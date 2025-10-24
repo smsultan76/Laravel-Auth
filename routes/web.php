@@ -62,3 +62,11 @@ Route::post('/reset-password',[PasswordResetController::class, 'newstore'])
 
 //Todo routes
 Route::get('/todos', [TodoController::class, 'index']);
+
+
+
+
+
+Route::get('/hotel', [TicketController::class, 'index'])->name('tickets.index');
+Route::post('/take', [TicketController::class, 'takeTicket'])->name('tickets.take');
+Route::post('/reset', [TicketController::class, 'resetToday'])->name('tickets.reset');
