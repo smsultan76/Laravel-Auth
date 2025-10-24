@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Models\Todo;
+
 class TodoService
 {
     /**
@@ -14,10 +16,10 @@ class TodoService
     public function getTodos()
     {
         // return "Hello from TodoService!";
-        return [
-            ['id' => 1, 'task' => 'Buy groceries', 'completed' => false],
-            ['id' => 2, 'task' => 'Clean the house', 'completed' => true],
-            ['id' => 3, 'task' => 'Finish the project', 'completed' => false],
-        ];
+        return Todo::all();
+    }
+
+    public function createTodo($data){
+        return Todo::create($data);
     }
 }

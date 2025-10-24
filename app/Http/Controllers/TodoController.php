@@ -18,4 +18,16 @@ class TodoController extends Controller
         $todos = $this->todoService->getTodos();
         return response()->json($todos);
     }
+
+    
+    public function store(Request $request){
+        $request->validate([
+            'task' => 'required|string|max:100',
+            'description' => 'nullable|string',
+            'status' => 'nullable|string|in:pending,completed,in-progress,cancelled',
+        ]);
+
+        $task = $this->todoService->createTodo($request->all());
+        return response($task, 201);
+    }
 }
