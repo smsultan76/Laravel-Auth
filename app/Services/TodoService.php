@@ -11,4 +11,13 @@ class TodoService
     {
         //
     }
+    public function getTodos()
+    {
+        // return "Hello from TodoService!";
+        return [
+            ['id' => 1, 'task' => 'Buy groceries', 'completed' => false],
+            ['id' => 2, 'task' => 'Clean the house', 'completed' => true],
+            ['id' => 3, 'task' => 'Finish the project', 'completed' => false],
+        ];
+    }
 }

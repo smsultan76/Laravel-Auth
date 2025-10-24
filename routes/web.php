@@ -56,3 +56,9 @@ Route::get('/reset-password/{token}',[PasswordResetController::class,'newcreate'
 
 Route::post('/reset-password',[PasswordResetController::class, 'newstore'])
     ->middleware('guest')->name('password.update');
+
+
+
+
+//Todo routes
+Route::get('/todos', [TodoController::class, 'index']);
